@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu0"
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard"/>
+        <item android:id="@+id/menu1"
+            android:title="Personal Information"
+            android:icon="@drawable/username"/>
+        <item android:id="@+id/menu2"
+            android:title="History"
+            android:icon="@drawable/history"/>
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item android:id="@+id/menu3"
+                android:title="Terms and Condition"
+                android:icon="@drawable/terms"/>
+            <item android:id="@+id/menu4"
+                android:title="Log Out"
+                android:icon="@drawable/logout"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.dashboard"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <android.support.v7.widget.Toolbar
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@color/colorPrimaryDark"
+          android:id="@+id/toolbar"
+          android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+          app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+          android:elevation="4dp"/>
+
+      <FrameLayout
+          android:id="@+id/fragment_container"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:backgroundTint="#c1c1c1">
+          <!--
+          <GridLayout
+              android:id="@+id/gridLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="2"
+              android:columnCount="2"
+              android:columnOrderPreserved="false"
+              android:rowCount="2"
+              android:layout_marginBottom="50dp">
+
+
+              <android.support.v7.widget.CardView
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"
+                  android:layout_marginLeft="16dp"
+                  android:layout_marginRight="8dp"
+                  android:layout_marginBottom="16dp"
+                  app:cardBackgroundColor="@color/colorPrimaryDark"
+                  app:cardCornerRadius="8dp"
+                  app:cardElevation="8dp">
+                  <ImageView
+                      android:id="@+id/cardMissing"
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/missing"
+                      android:layout_marginBottom="10dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="MISSING PERSON"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="75dp"
+                      android:textColor="@color/colorTextWhite"/>
+              </android.support.v7.widget.CardView>
+
+
+              <android.support.v7.widget.CardView
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"
+                  android:layout_marginLeft="8dp"
+                  android:layout_marginRight="16dp"
+                  android:layout_marginBottom="16dp"
+                  app:cardBackgroundColor="@color/colorTextWhite"
+                  app:cardCornerRadius="8dp"
+                  app:cardElevation="8dp">
+                  <ImageView
+                      android:id="@+id/cardWanted"
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/wanted"
+                      android:layout_marginBottom="10dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="WANTED PERSON"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="75dp"
+                      android:textColor="@color/colorPrimaryDark"/>
+              </android.support.v7.widget.CardView>
+
+
+              <android.support.v7.widget.CardView
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"
+                  android:layout_marginLeft="16dp"
+                  android:layout_marginRight="8dp"
+                  android:layout_marginBottom="16dp"
+                  app:cardBackgroundColor="@color/colorTextWhite"
+                  app:cardCornerRadius="8dp"
+                  app:cardElevation="8dp">
+                  <ImageView
+                      android:id="@+id/cardCar"
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/car"
+                      android:layout_marginBottom="10dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="CARNAPPED"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="75dp"
+                      android:textColor="@color/colorPrimaryDark"/>
+              </android.support.v7.widget.CardView>
+
+
+              <android.support.v7.widget.CardView
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_rowWeight="1"
+                  android:layout_columnWeight="1"
+                  android:layout_marginLeft="8dp"
+                  android:layout_marginRight="16dp"
+                  android:layout_marginBottom="16dp"
+                  app:cardBackgroundColor="@color/colorPrimaryDark"
+                  app:cardCornerRadius="8dp"
+                  app:cardElevation="8dp">
+                  <ImageView
+                      android:id="@+id/cardMap"
+                      android:layout_width="150dp"
+                      android:layout_height="150dp"
+                      android:layout_gravity="center"
+                      android:src="@drawable/maps"
+                      android:layout_marginBottom="10dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="MAP"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="75dp"
+                      android:textColor="@color/colorTextWhite"/>
+              </android.support.v7.widget.CardView>
+          </GridLayout>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/redcapsule"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:text="Emergency Call"
+                android:textColor="#ffffff"
+                android:layout_gravity="bottom"
+                android:gravity="center">
+
+            </Button>-->
+      </FrameLayout>
+  </LinearLayout>
+
+<android.support.design.widget.NavigationView
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_gravity="start"
+    android:id="@+id/nav_view"
+    app:headerLayout="@layout/nav_header"
+    app:menu="@menu/sidemenu"/>
+</android.support.v4.widget.DrawerLayout>
